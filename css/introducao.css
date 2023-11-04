@@ -1,0 +1,117 @@
+.introducao{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 100px;
+    align-items: center;
+    padding: 40px;
+}
+
+.introducao p{
+    font-size: 2rem;
+}
+
+.introducao div h1{
+    font-size: 4.9rem;
+    position: relative;
+}
+
+h1::before{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 95px;
+    background-image: url(../img/detalhe.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    left: -20px;
+    top: -10px
+}
+
+@media(max-width: 1070px){
+    .introducao{
+        gap: 50px;
+    }
+
+    h1::before{
+        width: 85px;
+        height: 80px;
+    }
+    
+    .introducao p{
+        font-size: 1.5rem;
+    }
+
+    .introducao div h1{
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 800px){
+    .introducao{
+        gap: 20px;
+        padding: 20px;
+        margin: 0px;
+    }
+
+    h1::before{
+        width: 70px;
+        height: 65px;
+        left: -10px;
+        top: -5px
+    }
+
+    .introducao p{
+        font-size: 1.2rem;
+    }
+
+    .introducao div h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media(max-width: 700px){
+    .introducao{
+        padding: 20px 50px;
+    }
+
+    h1::before{
+        height: 10px;
+        width: 50px;
+        background-size: 400%;
+        background-position: center;
+        left: 5px;
+}
+
+    .introducao div h1{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 600px){
+    .introducao img{
+        display: none;
+    }
+}
+
+
+@media(max-width: 430px){
+    .introducao div h1{
+        font-size: 2.5rem;
+    }
+    .introducao{
+        padding: 20px 20px 0px 20px;
+    }
+}
+
+@media(max-width: 300px){
+    .introducao{
+         padding: 10px;
+    }
+    .introducao div h1{
+        font-size: 2rem;
+    }
+ }
